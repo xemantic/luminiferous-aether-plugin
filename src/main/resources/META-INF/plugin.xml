@@ -1,0 +1,42 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+
+  <id>com.xemantic.aether.plugin</id>
+
+  <name>Luminiferous Aether Live Coding</name>
+
+  <vendor email="support@xemantic.com" url="https://www.xemantic.com">Xemantic</vendor>
+
+  <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+       Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+       Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+  <description>
+    Allows continuous streaming of the code of a current editor via OSC protocol.
+    The caret position changes are streamed as well.
+  </description>
+
+  <!-- Product and plugin compatibility requirements.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <!-- Extension points defined by the plugin.
+       Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+  <extensions defaultExtensionNs="com.intellij">
+
+  </extensions>
+
+<!--  <actions>-->
+<!--    <action id="com.xemantic.aether.plugin.LuminiferousAetherLiveCodingAction"-->
+<!--            class="com.xemantic.aether.plugin.LuminiferousAetherLiveCodingAction"-->
+<!--            text="Luminiferous Aether Live Coding"/>-->
+<!--  </actions>-->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <toolWindow id="Luminiferous Aether"
+                secondary="true"
+                icon="AllIcons.Toolwindows.WebToolWindow"
+                anchor="right"
+                factoryClass="com.xemantic.aether.plugin.LuminiferousAetherToolWindowFactory"/>
+  </extensions>
+
+</idea-plugin>
